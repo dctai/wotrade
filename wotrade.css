@@ -27,7 +27,6 @@ header{
  */
 
 .nav-masthead .nav-link {
-  color: rgba(0, 0, 0, 1);
   margin-left: 1rem;
 }
 
@@ -49,11 +48,23 @@ header{
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
 }
 
+.bg-lightgray {
+  background: #F8F8F8;
+}
+.bg-lg{
+  background-color: #F0F0F0;
+}
+.bg-lightred {
+  background: #E45252;
+}
 .bg-brandred {
   background: #C74040;
 }
 .line-brandred{
   border: 1px solid #C74040;
+}
+.line-gray{
+  border: 1px solid #B4B4B4;
 }
 .text-brandred{
   color: #C74040;
@@ -69,9 +80,6 @@ header{
 }
 .mbh40 {
   margin-bottom: 40px;
-}
-.bg-lg{
-  background-color: #F0F0F0;
 }
 .wmax320 {
   max-width: 320px;
