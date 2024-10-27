@@ -82,7 +82,7 @@ table {
 	background-color: #F0F0F0;
 }
 .ui-datepicker-calendar tbody td a.ui-state-active {
-	background-color: #C74040;
+	background-color: #FF4726;
 	color: white;
 }
 .ui-datepicker-header a.ui-corner-all {
@@ -147,7 +147,7 @@ table {
         <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Member</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Pending</a>
-        <a class="nav-link fw-bold px-0 text-brandred" href="#">Reports</a>
+        <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Result</a>
         <a class="nav-link fw-bold px-0 text-black" href="payment.html">Payment</a>
       </nav>
@@ -166,60 +166,94 @@ table {
       <span class="fw-bold">25/4/2024 15:38:05</span>
   </header>
 
-  <main class="px-3 d-flex flex-column" style="padding-top: 150px;padding-bottom: 40px;">
-    <h3 class="fw-bold mbh20">Reports</h3>
-    <div class="d-flex align-items-center gap-3 mbh20">
-      <div class="input-group mb-1" style="width:150px;">
-        <select class="form-select bg-lg line-gray" id="inputGroupSelect01">
-          <option selected>List</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-      <a class="nav-link fw-bold px-0 text-brandred" href="#">Today</a>
-      <a class="nav-link fw-bold px-0 text-brandred" href="#">This Week</a>
-      <a class="nav-link fw-bold px-0 text-brandred" href="#">Last Week</a>
-      <span>Date</span>
-      <div class="col d-flex bg-lg rounded-2 line-gray" style="padding-right:8px; max-width: 160px;"><input class="mt-0 rounded-2 form-control bg-lg border-0 datepicker" type="text" autocomplete="off" placeholder="dd/mm/yy"><img style="width: 20px;" src="assets/images/Cal.svg"></div>
-      <span>to</span>
-      <div class="col d-flex bg-lg rounded-2 line-gray" style="padding-right:8px; max-width: 160px;"><input class="mt-0 rounded-2 form-control bg-lg border-0 datepicker" type="text" autocomplete="off" placeholder="dd/mm/yy"><img style="width: 20px;" src="assets/images/Cal.svg"></div>
-      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 52px;">Load</a>
+  <main class="px-3 d-flex flex-column align-items-center" style="padding-top: 150px;">
+   
+    <div class="w-100" style="max-width: 1130px; padding-bottom: 40px;">
+    <div class="d-flex bg-white rounded-4 py-4 w-100 align-items-center mbh40">
+      <h3 class="w-25 fw-bold" style="height: 44px; line-height: 44px; padding-left: 40px; border-left: 4px solid #C74040">Profile</h3>
+        <div class="border-start px-4 py-2 w-75">
+          <div class="row mbh40 gap-2">
+            <div class="col">
+              <div class="text-gray mbh4">Code</div>
+              <h6 class="fw-bold m-0">A000A1001</h6>
+            </div>
+            <div class="col">
+              <div class="text-gray mbh4">Name</div>
+              <h6 class="fw-bold m-0">A000A1001</h6>
+            </div>
+            <div class="col">
+              <div class="text-gray mbh4">Currency</div>
+              <h6 class="fw-bold m-0">VND</h6>
+            </div>
+          </div>
+          <div class="row mbh40 gap-2">
+            <div class="col">
+              <div class="text-gray mbh4">Credit Limit</div>
+              <h6 class="fw-bold m-0">100,000,000,000,000,000,000</h6>
+            </div>
+            <div class="col">
+              <div class="text-gray mbh4">Allocated</div>
+              <h6 class="fw-bold m-0">36320000</h6>
+            </div>
+            <div class="col">
+              <div class="text-gray mbh4">Left</div>
+              <h6 class="fw-bold m-0">100,000,000,000,000,000,000</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="text-gray mbh4">Link to Telegram</div>
+              <div class="d-flex rounded-5 text-white align-items-center gap-2" style="background-color: #24A1DE; max-width: 145px; padding: 8px 16px 8px 16px;font-size:12px"><img style="height: 16px;" src="assets/images/ic_telegram.svg">Login as Yiyang</div>
+            </div>
+          </div>
+        </div>    
     </div>
-<!--Table-->
-<div class="rounded-2 overflow-hidden" style="border: 1px solid #d7d7d7">
-<div class="row g-0 bg-white py-2 px-3" style="border-bottom: 1px solid #D7D7D7">
-  <div class="col-1 text-black">No</div>
-  <div class="col text-black">Game</div>
-  <div class="col text-black">Country</div>
-  <div class="col text-black">Name</div>
-  <div class="col text-black">Date</div>
-  <div class="col text-black">Number</div>
-</div>
-<a href="report_d.html" class="bg-white row g-0 py-2 px-3 text-decoration-none">
-  <div class="col-1 text-black">1</div>
-  <div class="col text-black">3D</div>
-  <div class="col text-black">Hong Kong</div>
-  <div class="col text-black">Hong Kong Index</div>
-  <div class="col text-black">02/05/24</div>
-  <div class="col text-black">002</div>
-</a>
-<a href="report_d.html" class="bg-lightgray row g-0 py-2 px-3 text-decoration-none">
-  <div class="col-1 text-black">2</div>
-  <div class="col text-black">3D</div>
-  <div class="col text-black">Hong Kong</div>
-  <div class="col text-black">Hong Kong Index</div>
-  <div class="col text-black">02/05/24</div>
-  <div class="col text-black">002</div>
-</a>
-<a href="report_d.html" class="bg-white row g-0 py-2 px-3 text-decoration-none">
-  <div class="col-1 text-black">3</div>
-  <div class="col text-black">3D</div>
-  <div class="col text-black">Hong Kong</div>
-  <div class="col text-black">Hong Kong Index</div>
-  <div class="col text-black">02/05/24</div>
-  <div class="col text-black">002</div>
-</a>
+
+    <div class="d-flex bg-white rounded-4 py-4 w-100 align-items-center mbh40">
+      <h3 class="w-25 fw-bold" style="height: 44px; line-height: 44px; padding-left: 40px; border-left: 4px solid #C74040">3D System</h3>
+        <div class="border-start px-4 py-2 w-75">
+          <div class="row gap-2">
+            <div class="col">
+              <div class="text-gray mbh4">Commission</div>
+              <h6 class="fw-bold m-0">11%</h6>
+            </div>
+            <div class="col">
+              <div class="text-gray mbh4">Strike Comm</div>
+              <h6 class="fw-bold m-0">10%</h6>
+            </div>
+            <div class="col">
+              <div class="text-gray mbh4">Status</div>
+              <h6 class="fw-bold m-0">ACTIVE</h6>
+            </div>
+          </div>
+        </div>    
+    </div>
+  <div class="d-flex w-100 mbh40">
+    <a class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 300px;">Change password and PIN</a>
+  </div>
+  <h3 class="fw-bold mbh20">Add Cash</h3>
+  <!--Table-->
+<div class="rounded-2 overflow-hidden w-100" style="border: 1px solid #d7d7d7">
+  <div class="row g-0 bg-lightred py-2 px-3">
+    <div class="col-1 text-white">No</div>
+    <div class="col text-white">Date</div>
+    <div class="col text-white">Add Cash</div>
+  </div>
+  <a href="report_d.html" class="bg-white row g-0 py-2 px-3 text-decoration-none w-100">
+    <div class="col-1 text-black">1</div>
+    <div class="col text-black">02/05/24 14:24</div>
+    <div class="col text-black">100,000</div>
+  </a>
+  <a href="report_d.html" class="bg-lightgray row g-0 py-2 px-3 text-decoration-none">
+    <div class="col-1 text-black">2</div>
+    <div class="col text-black">02/05/24 14:24</div>
+    <div class="col text-black">100,000</div>
+  </a>
+  <div class="row g-0 bg-white py-2 px-3">
+    <div class="col-1 text-black fw-bold">Total</div>
+    <div class="col text-black fw-bold"> </div>
+    <div class="col text-black fw-bold">200,000</div>
+  </div>
 </div>
 
 

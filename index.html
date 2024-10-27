@@ -10,7 +10,7 @@
     <title>WoTrade</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -31,6 +31,65 @@
           font-size: 3.5rem;
         }
       }
+      .input-group {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .input-display {
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            color: #666;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        .toggle-icon:hover {
+            color: #333;
+        }
+
+
+        button {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .group-title {
+            color: #666;
+            margin-top: 0;
+        }
     </style>
 
     
@@ -54,35 +113,41 @@
   </header>
 
   <main class="px-3 d-flex align-items-center flex-column" style="padding-top: 120px;">
-   <div class="bg-white mbh40 p-5 rounded-4">
+   <div class="bg-white mbh40 p-5 rounded-2">
      <h3 class="fw-bold mbh40 text-center">Enter Pin Code</h3>
-     <div class="d-flex wmax320 mbh20"><span class="w-50" style="line-height: 32px;">Enter Pin</span><input input type="text" id="display" readonly class="form-control bg-lg border-0 rounded-3"></div>
-     <div class="row g-0 wmax320 mbh40" style="gap:15px;">
-     <div class="row g-0" style="gap:15px;">
-    <button onclick="addNumber(0)" class="col p-2 bg-lg rounded-3 text-center border-0">0</button>
-    <button onclick="addNumber(1)" class="col p-2 bg-lg rounded-3 text-center border-0">1</button>
-    <button onclick="addNumber(2)" class="col p-2 bg-lg rounded-3 text-center border-0">2</button>
+     <div id="group1">
+      <div class="input-container">
+        <div class="d-flex mbh20"><span class="w-25" style="line-height: 32px;">Enter Pin</span>
+          <input type="password" readonly class="input-display form-control bg-lg no-border rounded-2">
+          <i class="toggle-icon fas fa-eye-slash" style="font-size:16px;" onclick="toggleInputType('group1')"></i>
+        </div>
+      </div>
+      <div class="row g-0 mbh20" style="gap:15px;">
+        <div class="row g-0" style="gap:15px;">
+          <button onclick="addNumber('group1', '1')" class="col p-2 bg-lg rounded-2 text-center border-0">1</button>
+          <button onclick="addNumber('group1', '2')" class="col p-2 bg-lg rounded-2 text-center border-0">2</button>
+          <button onclick="addNumber('group1', '3')" class="col p-2 bg-lg rounded-2 text-center border-0">3</button>
+        </div>
+        <div class="row g-0" style="gap:15px;">
+          <button onclick="addNumber('group1', '4')" class="col p-2 bg-lg rounded-2 text-center border-0">4</button>
+          <button onclick="addNumber('group1', '5')" class="col p-2 bg-lg rounded-2 text-center border-0">5</button>
+          <button onclick="addNumber('group1', '6')" class="col p-2 bg-lg rounded-2 text-center border-0">6</button>
+        </div>
+        <div class="row g-0" style="gap:15px;">
+          <button onclick="addNumber('group1', '7')" class="col p-2 bg-lg rounded-2 text-center border-0">7</button>
+          <button onclick="addNumber('group1', '8')" class="col p-2 bg-lg rounded-2 text-center border-0">8</button>
+          <button onclick="addNumber('group1', '9')" class="col p-2 bg-lg rounded-2 text-center border-0">9</button>
+        </div>
+        <div class="row g-0" style="gap:15px;">
+          <button onclick="addNumber('group1', '0')" class="col p-2 bg-lg rounded-2 text-center border-0">0</button>
+          <button onclick="clearDisplay('group1')" class="col-8 p-2 bg-lg rounded-2 text-center border-0">Clear</button>
+        </div>
+      </div>
+      <div class="d-flex mbh20" style="gap:15px;">
+        <button type="button" class="btn flex-fill bg-lg rounded-2" data-bs-dismiss="modal">Return</button>
+        <a type="button" class="flex-fill btn bg-brandred rounded-2 text-white text-decoration-none" href="announce.html">Enter</a>
+      </div>
     </div>
-    <div class="row g-0" style="gap:15px;">
-    <button onclick="addNumber(3)" class="col p-2 bg-lg rounded-3 text-center border-0">3</button>
-    <button onclick="addNumber(4)" class="col p-2 bg-lg rounded-3 text-center border-0">4</button>
-    <button onclick="addNumber(5)" class="col p-2 bg-lg rounded-3 text-center border-0">5</button>
-    </div>
-    <div class="row g-0" style="gap:15px;">
-    <button onclick="addNumber(6)" class="col p-2 bg-lg rounded-3 text-center border-0">6</button>
-    <button onclick="addNumber(7)" class="col p-2 bg-lg rounded-3 text-center border-0">7</button>
-    <button onclick="addNumber(8)" class="col p-2 bg-lg rounded-3 text-center border-0">8</button>
-    </div>
-    <div class="row g-0" style="gap:15px;">
-    <button onclick="addNumber(9)" class="col p-2 bg-lg rounded-3 text-center border-0">9</button>
-    <button id="clear" onclick="clearDisplay()" class="col-8 p-2 bg-lg rounded-3 text-center border-0">Clear</button>
-    </div>
-    </div>
-    <div class="d-flex mbh20" style="gap:15px;">
-      <button type="button" class="btn flex-fill bg-lg text-brandred rounded-3" data-bs-dismiss="modal">Return</button>
-      <a type="button" class="flex-fill btn bg-brandred rounded-3 text-white text-decoration-none" href="announce.html">Enter</a>
-    </div>
-   </div>
   </main>
 
   <footer class="d-flex align-items-center justify-content-around mt-auto text-white py-3">
@@ -129,15 +194,30 @@
 </div>
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  const display = document.getElementById('display');
+  function addNumber(groupId, number) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value += number;
+  }
 
-function addNumber(num) {
-display.value += num;
-}
+  function clearDisplay(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value = '';
+  }
 
-function clearDisplay() {
-display.value = '';
-}
+  function toggleInputType(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      const icon = document.querySelector(`#${groupId} .toggle-icon`);
+      
+      if (input.type === 'password') {
+          input.type = 'text';
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+      } else {
+          input.type = 'password';
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+      }
+  }
 </script>
 
     </body>

@@ -69,11 +69,17 @@ header{
 .text-brandred{
   color: #C74040;
 }
+.text-gray{
+  color:#545862;
+}
 .border-lgra{
   border-left: 1px solid ;
 }
 .font-14{
   font-size: 14px;
+}
+.mbh4{
+  margin-bottom: 4px;
 }
 .mbh20 {
   margin-bottom: 20px;
