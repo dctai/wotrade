@@ -31,6 +31,43 @@
           font-size: 3.5rem;
         }
       }
+      .dropbtn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:-100px;
+}
+
+.dropdown-content a {
+  color: #FF4726;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
     </style>
 
     
@@ -44,10 +81,10 @@
   <header class="mb-auto bg-white header-shadow text-end py-4 px-4 fixed-top">
     <div class="d-flex">
       <div class="d-flex align-items-center flex-fill">
-      <img style="height: 30px;" src="assets/images/wtlogo.svg">
+      <img style="height: 30px;" src="assets/images/logo.svg">
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
-        <a class="nav-link fw-bold px-0 text-black" href="#">Member</a>
+        <a class="nav-link fw-bold px-0 text-black" href="Member.html">Member</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Pending</a>
         <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Result</a>
@@ -60,9 +97,17 @@
           <a class="d-flex text-decoration-none text-black" href="#"><img class="bg-brandred p-2" src="assets/images/ic-asset.svg"><div class="p-2 rounded-end-2 line-brandred" style="line-height: 30px;">999,999,999,970,185,000</div></a>
         </div>
         <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 30px;" src="assets/images/ic-noti.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></a>
+        <div class="dropdown">
+          <button class="bg-brandred p-2 rounded-2 border-0"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></button>
+          <div class="dropdown-content rounded-2 text-start">
+          <a href="#">မြန်ြာဘာသာ</a>
+          <a href="#">Việt Nam</a>
+          <a href="#">English</a>
+          <a href="#">中文</a>
+          </div>
+        </div>
         <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-quiz.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
+        <a class="bg-brandred p-2 rounded-2" href="index.html"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
       </div>
     </div>
       <span class="fw-bold">25/4/2024 15:38:05</span>

@@ -129,6 +129,46 @@ table {
 	font-weight: 400;
 	font-size: 0.75rem;
 }
+.dropbtn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:-100px;
+}
+
+.dropdown-content a {
+  color: #FF4726;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
+        tbody tr:hover {
+          background-color: #FCCBCB;
+        }
     </style>
 
     
@@ -142,10 +182,10 @@ table {
   <header class="mb-auto bg-white header-shadow text-end py-4 px-4 fixed-top">
     <div class="d-flex">
       <div class="d-flex align-items-center flex-fill">
-      <img style="height: 30px;" src="assets/images/wtlogo.svg">
+      <img style="height: 30px;" src="assets/images/logo.svg">
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
-        <a class="nav-link fw-bold px-0 text-black" href="#">Member</a>
+        <a class="nav-link fw-bold px-0 text-black" href="Member.html">Member</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Pending</a>
         <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Result</a>
@@ -158,9 +198,17 @@ table {
           <a class="d-flex text-decoration-none text-black" href="#"><img class="bg-brandred p-2" src="assets/images/ic-asset.svg"><div class="p-2 rounded-end-2 line-brandred" style="line-height: 30px;">999,999,999,970,185,000</div></a>
         </div>
         <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 30px;" src="assets/images/ic-noti.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></a>
+        <div class="dropdown">
+          <button class="bg-brandred p-2 rounded-2 border-0"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></button>
+          <div class="dropdown-content rounded-2 text-start">
+          <a href="#">မြန်ြာဘာသာ</a>
+          <a href="#">Việt Nam</a>
+          <a href="#">English</a>
+          <a href="#">中文</a>
+          </div>
+        </div>
         <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-quiz.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
+        <a class="bg-brandred p-2 rounded-2" href="index.html"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
       </div>
     </div>
       <span class="fw-bold">25/4/2024 15:38:05</span>
@@ -229,32 +277,41 @@ table {
         </div>    
     </div>
   <div class="d-flex w-100 mbh40">
-    <a class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 300px;">Change password and PIN</a>
+    <a href="changepw.html" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 300px;">Change password and PIN</a>
   </div>
   <h3 class="fw-bold mbh20">Add Cash</h3>
-  <!--Table-->
-<div class="rounded-2 overflow-hidden w-100" style="border: 1px solid #d7d7d7">
-  <div class="row g-0 bg-lightred py-2 px-3">
-    <div class="col-1 text-white">No</div>
-    <div class="col text-white">Date</div>
-    <div class="col text-white">Add Cash</div>
+  
+   <!--Table-->
+  <div class="rounded-2 overflow-hidden mbh40" style="border: 1px solid #d7d7d7">
+    <table class="table table-responsive table-borderless m-0">
+      <thead>
+        <tr class="row bg-lightred text-white px-3 g-0">
+          <th class="col-1 bg-transparent text-white">No</th>
+          <th class="col bg-transparent text-white">Date</th>
+          <th class="col bg-transparent text-white">Add Cash</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
+          style="border-bottom: 1px solid #E9E9E9;">
+          <td class="col-1 bg-transparent">1</td>
+          <td class="col bg-transparent">02/05/24 14:24</td>
+          <td class="col bg-transparent">100,000</td>
+        </tr>
+        <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
+          style="border-bottom: 1px solid #E9E9E9;">
+          <td class="col-1 bg-transparent">1</td>
+          <td class="col bg-transparent">02/05/24 14:24</td>
+          <td class="col bg-transparent">100,000</td>
+        </tr>
+        <tr class="bg-w text-black row g-0 px-3 text-decoration-none">
+          <td class="col-1 bg-transparent fw-bold">Total</td>
+          <td class="col bg-transparent fw-bold"></td>
+          <td class="col bg-transparent fw-bold">200,000</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <a href="report_d.html" class="bg-white row g-0 py-2 px-3 text-decoration-none w-100">
-    <div class="col-1 text-black">1</div>
-    <div class="col text-black">02/05/24 14:24</div>
-    <div class="col text-black">100,000</div>
-  </a>
-  <a href="report_d.html" class="bg-lightgray row g-0 py-2 px-3 text-decoration-none">
-    <div class="col-1 text-black">2</div>
-    <div class="col text-black">02/05/24 14:24</div>
-    <div class="col text-black">100,000</div>
-  </a>
-  <div class="row g-0 bg-white py-2 px-3">
-    <div class="col-1 text-black fw-bold">Total</div>
-    <div class="col text-black fw-bold"> </div>
-    <div class="col text-black fw-bold">200,000</div>
-  </div>
-</div>
 
 
   </main>

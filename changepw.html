@@ -10,7 +10,7 @@
     <title>WoTrade</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -82,7 +82,7 @@ table {
 	background-color: #F0F0F0;
 }
 .ui-datepicker-calendar tbody td a.ui-state-active {
-	background-color: #C74040;
+	background-color: #FF4726;
 	color: white;
 }
 .ui-datepicker-header a.ui-corner-all {
@@ -129,7 +129,86 @@ table {
 	font-weight: 400;
 	font-size: 0.75rem;
 }
-.dropbtn {
+#inputcontainer {
+       display: flex;
+      }
+      #inputcontainer > svg {
+       margin-left: 5px;
+      }
+      .password-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 0px;
+            border-radius: 4px;
+        }
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .input-group {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .input-display {
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        .toggle-icon:hover {
+            color: #333;
+        }
+        button {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .group-title {
+            color: #666;
+            margin-top: 0;
+        }
+        .dropbtn {
         background-color: #fff;
         border: none;
         cursor: pointer;
@@ -166,9 +245,7 @@ table {
 .dropdown:hover .dropbtn {
   background-color: #fff;
 }
-tbody tr:hover {
-          background-color: #FCCBCB;
-        }
+
     </style>
 
     
@@ -187,7 +264,7 @@ tbody tr:hover {
         <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
         <a class="nav-link fw-bold px-0 text-black" href="Member.html">Member</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Pending</a>
-        <a class="nav-link fw-bold px-0 text-brandred" href="#">Reports</a>
+        <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Result</a>
         <a class="nav-link fw-bold px-0 text-black" href="payment.html">Payment</a>
       </nav>
@@ -214,74 +291,64 @@ tbody tr:hover {
       <span class="fw-bold">25/4/2024 15:38:05</span>
   </header>
 
-  <main class="px-3 d-flex flex-column" style="padding-top: 150px;padding-bottom: 40px;">
-    <h3 class="fw-bold mbh20">Reports</h3>
-    <div class="d-flex align-items-center gap-3 mbh20">
-      <div class="input-group mb-1" style="width:150px;">
-        <select class="form-select bg-lg line-gray" id="inputGroupSelect01">
-          <option selected>List</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-      <a class="nav-link fw-bold px-0 text-brandred" href="#">Today</a>
-      <a class="nav-link fw-bold px-0 text-brandred" href="#">This Week</a>
-      <a class="nav-link fw-bold px-0 text-brandred" href="#">Last Week</a>
-      <span>Date</span>
-      <div class="col d-flex bg-lg rounded-2 line-gray" style="padding-right:8px; max-width: 160px;"><input class="mt-0 rounded-2 form-control bg-lg border-0 datepicker" type="text" autocomplete="off" placeholder="dd/mm/yy"><img style="width: 20px;" src="assets/images/Cal.svg"></div>
-      <span>to</span>
-      <div class="col d-flex bg-lg rounded-2 line-gray" style="padding-right:8px; max-width: 160px;"><input class="mt-0 rounded-2 form-control bg-lg border-0 datepicker" type="text" autocomplete="off" placeholder="dd/mm/yy"><img style="width: 20px;" src="assets/images/Cal.svg"></div>
-      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 52px;">Load</a>
+  <main class="px-3 d-flex flex-column align-items-center" style="padding-top: 150px;">
+   
+    <div class="w-100" style="max-width: 1130px; padding-bottom: 40px;">
+    <div class="d-flex bg-white rounded-4 py-4 w-100 align-items-center mbh40">
+      <h3 class="w-25 fw-bold" style="line-height: 44px; padding-left: 40px; border-left: 4px solid #C74040">Change
+        <br>Password</h3>
+        <div class="border-start px-4 py-2 w-75">
+          <div class="gap-2">
+            <label>Original password</label>
+            <div class="password-container">
+              <input type="password" id="password1" class="bg-lg rounded-2">
+              <i class="toggle-password fas fa-eye" onclick="togglePassword('password1', this)"></i>
+            </div>
+            <label>New password</label>
+            <div class="password-container">
+              <input type="password" id="password2" class="bg-lg rounded-2">
+              <i class="toggle-password fas fa-eye" onclick="togglePassword('password2', this)"></i>
+            </div>
+            <label>Confirm new password</label>
+            <div class="password-container">
+              <input type="password" id="password3" class="bg-lg rounded-2">
+              <i class="toggle-password fas fa-eye" onclick="togglePassword('password3', this)"></i>
+            </div>
+              <button type="button" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
+          </div>
+        </div>    
     </div>
 
-
-    
-      <!--Table-->
-      <div class="rounded-2 overflow-hidden mbh40" style="border: 1px solid #d7d7d7">
-        <table class="table table-responsive table-borderless m-0">
-          <thead>
-            <tr class="row bg-w px-3 g-0" style="border-bottom: 1px solid #E9E9E9;">
-              <th class="col-1 bg-transparent text-black ">No</th>
-              <th class="col bg-transparent text-black ">Game</th>
-              <th class="col bg-transparent text-black ">Country</th>
-              <th class="col bg-transparent text-black ">Name</th>
-              <th class="col bg-transparent text-black ">Date</th>
-              <th class="col bg-transparent text-black ">Number</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
-              style="border-bottom: 1px solid #E9E9E9;">
-              <td class="col-1 bg-transparent">1</td>
-              <td class="col bg-transparent">3D</td>
-              <td class="col bg-transparent">Hong Kong</td>
-              <td class="col bg-transparent">Hong Kong Index</td>
-              <td class="col bg-transparent">02/05/24</td>
-              <td class="col bg-transparent">002</td>
-            </tr>
-            <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
-              style="border-bottom: 1px solid #E9E9E9;">
-              <td class="col-1 bg-transparent">1</td>
-              <td class="col bg-transparent">3D</td>
-              <td class="col bg-transparent">Hong Kong</td>
-              <td class="col bg-transparent">Hong Kong Index</td>
-              <td class="col bg-transparent">02/05/24</td>
-              <td class="col bg-transparent">002</td>
-            </tr>
-            <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
-            >
-            <td class="col-1 bg-transparent">1</td>
-            <td class="col bg-transparent">3D</td>
-            <td class="col bg-transparent">Hong Kong</td>
-            <td class="col bg-transparent">Hong Kong Index</td>
-            <td class="col bg-transparent">02/05/24</td>
-            <td class="col bg-transparent">002</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-
+    <div class="d-flex bg-white rounded-4 py-4 w-100 align-items-center mbh40">
+      <h3 class="w-25 fw-bold" style="line-height: 44px; padding-left: 40px; border-left: 4px solid #C74040">Change
+        <br>Pin Code</h3>
+        <div class="border-start px-4 py-2 w-75">
+          <div class="gap-2" id="group1">
+            <div class="input-container">
+              <div class="d-flex mbh20">
+                <input type="password" readonly class="input-display form-control no-border rounded-2" style="background-color: #f0f0f0;">
+                <i class="toggle-icon fas fa-eye-slash" style="font-size:16px;" onclick="toggleInputType('group1')"></i>
+              </div>
+            </div>
+            <div class="row g-0 mbh20" style="gap:15px;">
+              <div class="row g-0" style="gap:15px;">
+                <button onclick="addNumber('group1', '1')" class="col p-2 bg-lg rounded-2 text-center border-0">1</button>
+                <button onclick="addNumber('group1', '2')" class="col p-2 bg-lg rounded-2 text-center border-0">2</button>
+                <button onclick="addNumber('group1', '3')" class="col p-2 bg-lg rounded-2 text-center border-0">3</button>
+                <button onclick="addNumber('group1', '4')" class="col p-2 bg-lg rounded-2 text-center border-0">4</button>
+                <button onclick="addNumber('group1', '5')" class="col p-2 bg-lg rounded-2 text-center border-0">5</button>
+                <button onclick="addNumber('group1', '6')" class="col p-2 bg-lg rounded-2 text-center border-0">6</button>
+                <button onclick="addNumber('group1', '7')" class="col p-2 bg-lg rounded-2 text-center border-0">7</button>
+                <button onclick="addNumber('group1', '8')" class="col p-2 bg-lg rounded-2 text-center border-0">8</button>
+                <button onclick="addNumber('group1', '9')" class="col p-2 bg-lg rounded-2 text-center border-0">9</button>
+                <button onclick="addNumber('group1', '0')" class="col p-2 bg-lg rounded-2 text-center border-0">0</button>
+              </div>
+            </div>
+            <button type="button" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
+          </div>
+        </div>    
+    </div>
+  
 
 
   </main>
@@ -328,16 +395,47 @@ tbody tr:hover {
     </div>
   </footer>
 </div>
-<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!--multiple Show/Hide Password-->
 <script>
-$( function() {
-	$( ".datepicker" ).datepicker({
-		dateFormat: "dd-mm-yy"
-		,	duration: "fast"
-	});
-} );
+  function togglePassword(inputId, icon) {
+      const input = document.getElementById(inputId);
+      if (input.type === "password") {
+          input.type = "text";
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+      } else {
+          input.type = "password";
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+      }
+  }
+</script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function addNumber(groupId, number) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value += number;
+  }
+
+  function clearDisplay(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value = '';
+  }
+
+  function toggleInputType(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      const icon = document.querySelector(`#${groupId} .toggle-icon`);
+      
+      if (input.type === 'password') {
+          input.type = 'text';
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+      } else {
+          input.type = 'password';
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+      }
+  }
 </script>
 
 

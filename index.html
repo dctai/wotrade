@@ -90,6 +90,66 @@
             color: #666;
             margin-top: 0;
         }
+        .dropbtn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:-100px;
+}
+
+.dropdown-content a {
+  color: #FF4726;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
+        .number {
+          position: absolute;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            left:0px
+        }
+        .number.active {
+            opacity: 1;
+            
+        }
+        .barlow-bold {
+            font-family: "Barlow", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .lh-50{
+          line-height: 50px;
+        }
+        tbody tr:hover {
+          background-color: #FCCBCB;
+        }
     </style>
 
     
@@ -97,57 +157,193 @@
     <link href="wotrade.css" rel="stylesheet">
   </head>
   <body class="d-flex h-100 text-bg-light">
+    <!--Modal-->
+    <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content p-4">
+          <div class="modal-header border-0 d-flex text-center">
+            <h1 class="modal-title fs-5 w-100" id="exampleModalLabel"><span style="margin-right:8px;">登入</span><img style="height: 30px; margin-top:-6px;" src="assets/images/logo.svg"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body border-0">
+           <label class="fw-bold">登入名稱</label>
+           <input type="text" class="input-display form-control bg-lg border-0 rounded-2 mbh20" placeholder="輸入您的登入名稱">
+           <label class="fw-bold">登入密碼</label>
+           <input type="password" class="input-display form-control bg-lg border-0 rounded-2 mbh20" placeholder="輸入您的登入密碼">
+          </div>
+          <div class="modal-footer border-0">
+            <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+            <button class="w-100 btn p-2 bg-brandred rounded-2 text-white text-center" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">登入</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal2-->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header border-0 d-flex text-center">
+            <h1 class="modal-title fs-5 w-100 fw-bold" id="exampleModalToggleLabel2">Terms And Conditions</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-brandred">Payout for #8855 is 1 big = $3876, 1 small = $2907
+              Telegram number has changed to +66 943561684</p>
+              <p>IMDA Singapore has implemented new regulation for SMS.
+                Starting on 31 July 2023, our system will no longer accept SMS bet ticket.
+                Please use Telegram mobile app to submit bet ticket.</p>
+                <p>All toto break bin payout will follow bin payout</p>
+                <p class="text-brandred">Please be advise, kindly change your password into more secure format.
+                  Please check all fix bets toto and 4d on monday and wednesday</p>
+                  <img class="w-100" src="assets/images/tc1.jpg">
+
+          </div>
+          <div class="row g-0 modal-footer border-0">
+            <a href="pin.html" class="col p-2 bg-brandred rounded-2 text-white text-center">確認送出</a>
+            <button class="btn col p-2 bg-g rounded-2 text-white text-center border-0" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     
 <div class="d-flex w-100 h-100 mx-auto flex-column">
-  <header class="mb-auto bg-white header-shadow text-end py-4 px-4 fixed-top">
+  <header class="mb-auto bg-white header-shadow text-end py-2 px-4 fixed-top">
     <div class="d-flex">
       <div class="d-flex align-items-center flex-fill">
-      <img style="height: 30px;" src="assets/images/wtlogo.svg">
+      <img style="height: 30px;" src="assets/images/logo.svg">
       </div>
+      <div><span class="fw-bold">25/4/2024 15:38:05</span>
       <div class="d-flex gap-2" style="height: 48px;">
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></a>
+        <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 30px;" src="assets/images/ic-noti.svg"></a>
+        <div class="dropdown">
+          <button class="bg-brandred p-2 rounded-2 border-0"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></button>
+          <div class="dropdown-content rounded-2 text-start">
+          <a href="#">မြန်ြာဘာသာ</a>
+          <a href="#">Việt Nam</a>
+          <a href="#">English</a>
+          <a href="#">中文</a>
+          </div>
+        </div>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" class="bg-brandred p-2 rounded-2 border-0" href="#"><img style="height: 30px;" src="assets/images/ic-login.svg"></button>
       </div>
     </div>
-      <span class="fw-bold">25/4/2024 15:38:05</span>
+    </div>
+      
   </header>
 
   <main class="px-3 d-flex align-items-center flex-column" style="padding-top: 120px;">
-   <div class="d-flex flex-column bg-white mbh40 p-5 rounded-2 align-items-center" style="min-width: 50%;">
-     <h3 class="fw-bold mbh40 text-center">Enter Pin Code</h3>
-     <div id="group1" style="max-width: 320px;">
-      <div class="input-container">
-        <div class="d-flex mbh20"><span class="w-50" style="line-height: 32px;">Enter Pin</span>
-          <input type="password" readonly class="input-display form-control bg-lg no-border rounded-2">
-          <i class="toggle-icon fas fa-eye-slash" style="font-size:16px;" onclick="toggleInputType('group1')"></i>
-        </div>
+
+    <div class="row gap-1 w-100" style="max-width: 1440px;">
+      <!--left side-->
+      <div class="col-9">
+       <div class="bg-lg text-center mbh20"><img src="assets/images/a11_1.jpg"></div>
+       <!--Table-->
+       <table class="table table-responsive table-borderless rounded-2 overflow-hidden mbh40">
+       <thead style="border-bottom: 1px solid #D7D7D7">
+       <tr class="row bg-lightred text-white py-2 px-3 g-0">
+        <th class="col bg-transparent text-white">Symblo</th>
+        <th class="col bg-transparent text-white">Country</th>
+        <th class="col bg-transparent text-white">Name</th>
+        <th class="col bg-transparent text-white">Last Price</th>
+        <th class="col bg-transparent text-white">Change</th>
+        <th class="col bg-transparent text-white">%Change</th>
+        <th class="col bg-transparent text-white">Stop Bet</th>
+        <th class="col bg-transparent text-white">Market Close</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none" style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent lh-50">^HSI</td>
+        <td class="col bg-transparent"><img style="height: 24px;" src="assets/images/russian-federation.png"><br>Russia</td>
+        <td class="col bg-transparent lh-50">NZX 50 Index</td>
+        <td class="col bg-transparent lh-50">11925.50</td>
+        <td class="col bg-transparent lh-50">8.55</td>
+        <td class="col bg-transparent lh-50">0.17</td>
+        <td class="col bg-transparent lh-50">15:30</td>
+        <td class="col bg-transparent lh-50">18m 49s</td>
+      </tr>
+      </tbody>
+      </table>
       </div>
-      <div class="row g-0 mbh20" style="gap:15px;">
-        <div class="row g-0" style="gap:15px;">
-          <button onclick="addNumber('group1', '1')" class="col p-2 bg-lg rounded-2 text-center border-0">1</button>
-          <button onclick="addNumber('group1', '2')" class="col p-2 bg-lg rounded-2 text-center border-0">2</button>
-          <button onclick="addNumber('group1', '3')" class="col p-2 bg-lg rounded-2 text-center border-0">3</button>
-        </div>
-        <div class="row g-0" style="gap:15px;">
-          <button onclick="addNumber('group1', '4')" class="col p-2 bg-lg rounded-2 text-center border-0">4</button>
-          <button onclick="addNumber('group1', '5')" class="col p-2 bg-lg rounded-2 text-center border-0">5</button>
-          <button onclick="addNumber('group1', '6')" class="col p-2 bg-lg rounded-2 text-center border-0">6</button>
-        </div>
-        <div class="row g-0" style="gap:15px;">
-          <button onclick="addNumber('group1', '7')" class="col p-2 bg-lg rounded-2 text-center border-0">7</button>
-          <button onclick="addNumber('group1', '8')" class="col p-2 bg-lg rounded-2 text-center border-0">8</button>
-          <button onclick="addNumber('group1', '9')" class="col p-2 bg-lg rounded-2 text-center border-0">9</button>
-        </div>
-        <div class="row g-0" style="gap:15px;">
-          <button onclick="addNumber('group1', '0')" class="col p-2 bg-lg rounded-2 text-center border-0">0</button>
-          <button onclick="clearDisplay('group1')" class="col-8 p-2 bg-lg rounded-2 text-center border-0">Clear</button>
-        </div>
-      </div>
-      <div class="d-flex mbh20" style="gap:15px;">
-        <button type="button" class="btn flex-fill bg-lg rounded-2" data-bs-dismiss="modal">Return</button>
-        <a type="button" class="flex-fill btn bg-brandred rounded-2 text-white text-decoration-none" href="announce.html">Enter</a>
+      <!--right side-->
+      <div class="col">
+        <img class="mbh40" src="assets/images/ad_220x136.png">
+        <img class="mbh40" src="assets/images/ad_220x282.png">
+        <img class="mbh40" src="assets/images/ad2_220x136.png">
       </div>
     </div>
+
   </main>
 
   <footer class="d-flex align-items-center justify-content-around mt-auto text-white py-3">

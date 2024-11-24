@@ -54,11 +54,17 @@ header{
 .bg-lg{
   background-color: #F0F0F0;
 }
+.bg-w{
+  background-color: #ffffff;
+}
 .bg-lightred {
   background: #E45252;
 }
 .bg-brandred {
   background: #C74040;
+}
+.bg-g{
+  background-color: #BFBFBF;
 }
 .line-brandred{
   border: 1px solid #C74040;

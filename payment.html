@@ -133,6 +133,46 @@ table {
   background-color:#C74040;
   border-color:#C74040;
 }
+.dropbtn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:-100px;
+}
+
+.dropdown-content a {
+  color: #FF4726;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
+tbody tr:hover {
+          background-color: #FCCBCB;
+        }
     </style>
 
     
@@ -146,28 +186,45 @@ table {
   <header class="mb-auto bg-white header-shadow text-end py-4 px-4 fixed-top">
     <div class="d-flex">
       <div class="d-flex align-items-center flex-fill">
-      <img style="height: 30px;" src="assets/images/wtlogo.svg">
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
-        <a class="nav-link fw-bold px-0 text-black" href="#">Member</a>
-        <a class="nav-link fw-bold px-0 text-black" href="#">Pending</a>
-        <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
-        <a class="nav-link fw-bold px-0 text-black" href="#">Result</a>
-        <a class="nav-link fw-bold px-0 text-brandred" href="#">Payment</a>
-      </nav>
+        <img style="height: 30px;" src="assets/images/logo.svg">
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
+          <a class="nav-link fw-bold px-0 text-black" href="Member.html">Member</a>
+          <a class="nav-link fw-bold px-0 text-black" href="#">Pending</a>
+          <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
+          <a class="nav-link fw-bold px-0 text-black" href="#">Result</a>
+          <a class="nav-link fw-bold px-0 text-brandred" href="#">Payment</a>
+        </nav>
       </div>
       <div class="d-flex gap-2" style="height: 48px;">
         <div class="d-flex">
-          <a class="d-flex text-decoration-none text-black" href="profile.html"><img class="bg-brandred p-2 rounded-start-2" src="assets/images/ic-user.svg"><div class="p-2 line-brandred" style="line-height: 30px;">A000P2002</div></a>
-          <a class="d-flex text-decoration-none text-black" href="#"><img class="bg-brandred p-2" src="assets/images/ic-asset.svg"><div class="p-2 rounded-end-2 line-brandred" style="line-height: 30px;">999,999,999,970,185,000</div></a>
+          <a class="d-flex text-decoration-none text-black" href="profile.html"><img
+              class="bg-brandred p-2 rounded-start-2" src="assets/images/ic-user.svg">
+            <div class="p-2 line-brandred" style="line-height: 30px;">A000P2002</div>
+          </a>
+          <a class="d-flex text-decoration-none text-black" href="#"><img class="bg-brandred p-2"
+              src="assets/images/ic-asset.svg">
+            <div class="p-2 rounded-end-2 line-brandred" style="line-height: 30px;">999,999,999,970,185,000</div>
+          </a>
         </div>
-        <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 30px;" src="assets/images/ic-noti.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></a>
+        <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 30px;"
+            src="assets/images/ic-noti.svg"></a>
+        <div class="dropdown">
+          <button class="bg-brandred p-2 rounded-2 border-0"><img style="height: 30px;"
+              src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></button>
+          <div class="dropdown-content rounded-2 text-start">
+            <a href="#">မြန်ြာဘာသာ</a>
+            <a href="#">Việt Nam</a>
+            <a href="#">English</a>
+            <a href="#">中文</a>
+          </div>
+        </div>
         <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-quiz.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
+        <a class="bg-brandred p-2 rounded-2" href="index.html"><img style="height: 30px;"
+            src="assets/images/ic-logout.svg"></a>
       </div>
     </div>
-      <span class="fw-bold">25/4/2024 15:38:05</span>
+    <span class="fw-bold">25/4/2024 15:38:05</span>
   </header>
 
   <main class="px-3 d-flex flex-column" style="padding-top: 150px;padding-bottom: 40px;">
@@ -181,270 +238,208 @@ table {
       <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 52px;">Save</a>
       <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 52px;">Back</a>
     </div>
-<!--Table-->
-<div class="rounded-2 overflow-hidden" style="border: 1px solid #d7d7d7">
-<div class="row g-0 bg-lightred py-2 px-3 gap-3">
-  <div class="col text-white">Code</div>
-  <div class="col text-white">Game</div>
-  <div class="col text-white">Outstanding</div>
-  <div class="col text-white">Remark</div>
-  <div class="col text-white">Type</div>
-  <div class="col text-white">Amount</div>
-  <div class="col text-white">Action</div>
-  <div class="col text-white">History</div>
+
+ <!--Table-->
+<div class="rounded-2 overflow-hidden mbh40" style="border: 1px solid #d7d7d7">
+  <table class="table table-responsive table-borderless m-0" id="myTable">
+    <thead>
+      <tr class="row bg-lightred text-white px-3 g-0">
+        <th class="col bg-transparent text-white">Code</th>
+        <th class="col bg-transparent text-white">Game</th>
+        <th class="col bg-transparent text-white" onclick="sortTable(0)">Outstanding</th>
+        <th class="col bg-transparent text-white">Remark</th>
+        <th class="col bg-transparent text-white">Type</th>
+        <th class="col bg-transparent text-white">Amount</th>
+        <th class="col bg-transparent text-white">Action</th>
+        <th class="col bg-transparent text-white">History</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">2,758,800</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">2,758,800</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">2,758,800</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">2,758,800</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
+        style="border-bottom: 1px solid #E9E9E9;">
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">A001A1003</td>
+        <td class="col bg-transparent">2,758,800</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+      <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
+        >
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent">2</td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"> <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
+            <option selected>Payout(-)</option>
+            <option value="1">Collect(+)</option>
+            <option value="2">Add Cash(+)</option>
+          </select></td>
+        <td class="col bg-transparent"><input class="form-control form-control-sm m-0 bg-lg line-gray" type="text"
+            placeholder="Clearance"></td>
+        <td class="col bg-transparent"><input class="form-check-input bg-lg line-gray" type="checkbox" value=""
+            id="flexCheckDefault"></td>
+        <td class="col bg-transparent"><a class="text-brandred" href="payment_his.html">View</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+    
 
-<a href="#" class="bg-white row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-lightgray row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-white row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-lightgray row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-white row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-lightgray row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-white row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-lightgray row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-white row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-<a href="#" class="bg-lightgray row g-0 py-2 px-3 gap-3 text-decoration-none align-items-center">
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">A001A1003</div>
-  <div class="col text-black">2,758,800</div>
-  <div class="col text-black">
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <select class="form-select bg-lg line-gray" style="height:31px; font-size:13px">
-    <option selected>Payout(-)</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    </select>
-  </div>
-  <div class="col d-flex text-black align-items-center gap-2">
-    VND
-    <input class="form-control form-control-sm m-0 bg-lg line-gray" type="text" placeholder="Clearance">
-  </div>
-  <div class="col text-black">
-    <input class="form-check-input bg-lg line-gray" type="checkbox" value="" id="flexCheckDefault">
-  </div>
-  <div class="col text-black">View</div>
-</a>
-
-</div>
 
 
   </main>
@@ -502,6 +497,62 @@ $( function() {
 	});
 } );
 </script>
+<script>
+  function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("myTable");
+    switching = true;
+    //Set the sorting direction to ascending:
+    dir = "asc"; 
+    /*Make a loop that will continue until
+    no switching has been done:*/
+    while (switching) {
+      //start by saying: no switching is done:
+      switching = false;
+      rows = table.rows;
+      /*Loop through all table rows (except the
+      first, which contains table headers):*/
+      for (i = 1; i < (rows.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare,
+        one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+        /*check if the two rows should switch place,
+        based on the direction, asc or desc:*/
+        if (dir == "asc") {
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch= true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+      if (shouldSwitch) {
+        /*If a switch has been marked, make the switch
+        and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        //Each time a switch is done, increase this count by 1:
+        switchcount ++;      
+      } else {
+        /*If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again.*/
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+  }
+  </script>
 
 
     </body>
