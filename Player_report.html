@@ -148,7 +148,7 @@ table {
     <div class="d-none d-lg-block d-xl-block d-xxl-block bg-white header-shadow text-end py-4 px-4">
      <div class="d-flex">
       <div class="d-flex align-items-center flex-fill">
-      <img style="height: 30px;" src="assets/images/wtlogo.svg">
+      <img style="height: 30px;" src="assets/images/logo.svg">
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
         <a class="nav-link fw-bold px-0 text-black" href="#">Member</a>
@@ -172,20 +172,30 @@ table {
       <span class="fw-bold">25/4/2024 15:38:05</span>
     </div>
     <!--MobileHeader-->
-    <div class="d-block d-md-block d-sm-block d-lg-none bg-white header-shadow text-end py-4 px-4">
-     <div class="w-100">
-      <div class="d-flex gap-2" style="margin-bottom: 14px;">
-        <img class="flex-fill text-start" style="height: 30px;" src="assets/images/wtlogo.svg">
-        <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 30px;" src="assets/images/ic-noti.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-quiz.svg"></a>
-        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
+    <div class="d-flex justify-content-center d-block d-md-block d-sm-block d-lg-none bg-white header-shadow py-3 px-3">
+      <div style="max-width: 408px;">
+        <div class="d-flex gap-2 align-items-center justify-content-between" style="margin-bottom: 14px;">
+          <img class="text-start" style="height: 30px;" src="assets/images/logo.svg">
+          <div class="d-flex text-end gap-2">
+            <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 24px;"
+                src="assets/images/ic-noti.svg"></a>
+            <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;"
+                src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></a>
+            <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-quiz.svg"></a>
+            <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
+          </div>
+        </div>
+        <div class="d-flex">
+          <a class="d-flex text-decoration-none text-black" href="profile.html"><img class="bg-brandred p-2 rounded-start-2"
+              src="assets/images/ic-user.svg">
+            <div class="p-2 line-brandred" style="line-height: 30px;">A000P2002</div>
+          </a>
+          <a class="d-flex text-decoration-none text-black" href="#"><img class="bg-brandred p-2"
+              src="assets/images/ic-asset.svg">
+            <div class="p-2 rounded-end-2 line-brandred" style="line-height: 30px;">999,999,999,970,185,000</div>
+          </a>
+        </div>
       </div>
-      <div class="d-flex">
-        <a class="d-flex text-decoration-none text-black" href="profile.html"><img class="bg-brandred p-2 rounded-start-2" src="assets/images/ic-user.svg"><div class="p-2 line-brandred" style="line-height: 30px;">A000P2002</div></a>
-        <a class="d-flex text-decoration-none text-black" href="#"><img class="bg-brandred p-2" src="assets/images/ic-asset.svg"><div class="p-2 rounded-end-2 line-brandred" style="line-height: 30px;">999,999,999,970,185,000</div></a>
-      </div>
-     </div>
     </div>
 
   </header>
@@ -193,14 +203,45 @@ table {
 
   <main class="px-3 d-flex flex-column" style="padding-top: 150px;padding-bottom: 40px;">
     <h3 class="fw-bold mbh20">Payment</h3>
-    <div class="d-flex align-items-center gap-3 mbh20">
-      <div>
-        <div class="d-flex px-2 bg-lg rounded-2 line-gray" style="width:450px;">
+    <div class="d-flex align-items-center gap-3 mbh20 w-100">
+      <div class="w-100" style="max-width:450px;">
+        <div class="d-flex px-2 bg-lg rounded-2 line-gray">
         <input class="m-0 bg-lg" type="search" aria-label="Search"><button class="btn" type="submit"><img style="height: 24px;" src="assets/images/ic-search.svg"></button>
         </div>
       </div>
       <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 52px;">Save</a>
       <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 52px;">Back</a>
+    </div>
+<!--Mobile Real Table-->
+    <div class="rounded-2 overflow-hidden mbh40 d-block d-md-block d-sm-block d-lg-none" style="border: 1px solid #d7d7d7">
+      <table class="table table-responsive table-borderless m-0">
+        <thead>
+          <tr class="row bg-lightred text-white px-3 g-0">
+            <th class="col-1 bg-transparent text-white">No</th>
+            <th class="col bg-transparent text-white">Date</th>
+            <th class="col bg-transparent text-white">Add Cash</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle"
+            style="border-bottom: 1px solid #E9E9E9;">
+            <td class="col-1 bg-transparent">1</td>
+            <td class="col bg-transparent">02/05/24 14:24</td>
+            <td class="col bg-transparent">100,000</td>
+          </tr>
+          <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle"
+            style="border-bottom: 1px solid #E9E9E9;">
+            <td class="col-1 bg-transparent">1</td>
+            <td class="col bg-transparent">02/05/24 14:24</td>
+            <td class="col bg-transparent">100,000</td>
+          </tr>
+          <tr class="bg-w text-black row g-0 px-3 text-decoration-none">
+            <td class="col-1 bg-transparent fw-bold">Total</td>
+            <td class="col bg-transparent fw-bold"></td>
+            <td class="col bg-transparent fw-bold">200,000</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 <!--Table-->
 <div class="rounded-2 overflow-hidden d-none d-lg-block d-xl-block d-xxl-block" style="border: 1px solid #d7d7d7">
