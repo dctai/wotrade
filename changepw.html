@@ -254,6 +254,38 @@ table {
   </head>
   <body class="d-flex h-100 text-bg-light">
 
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content rounded-24 w-75 mx-auto">
+    <div class="modal-header d-flex flex-column border-0">
+      <img class="mbh12" src="assets/images/alert_l.svg">
+      <h5 class="modal-title text-center w-100" id="staticBackdropLabel">两次输入的密码不一致!</h5>
+      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+    </div>
+    <div class="modal-footer border-0">
+      <button type="button" class="flex-fill btn bg-brandred rounded-2 text-white" data-bs-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="pinBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content rounded-24 w-75 mx-auto">
+    <div class="modal-header d-flex flex-column border-0">
+      <img class="mbh12" src="assets/images/check_l.svg">
+      <h5 class="modal-title text-center w-100" id="staticBackdropLabel">PIN码更改成功讯息</h5>
+      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+    </div>
+    <div class="modal-footer border-0">
+      <button type="button" class="flex-fill btn bg-brandred rounded-2 text-white" data-bs-dismiss="modal">确定</button>
+    </div>
+  </div>
+</div>
+</div>
+
     
 <div class="d-flex w-100 h-100 mx-auto flex-column">
   <header class="mb-auto bg-white header-shadow text-end py-4 px-4 fixed-top">
@@ -314,7 +346,7 @@ table {
               <input type="password" id="password3" class="bg-lg rounded-2">
               <i class="toggle-password fas fa-eye" onclick="togglePassword('password3', this)"></i>
             </div>
-              <button type="button" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
+              <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
           </div>
         </div>    
     </div>
@@ -344,7 +376,7 @@ table {
                 <button onclick="addNumber('group1', '0')" class="col p-2 bg-lg rounded-2 text-center border-0">0</button>
               </div>
             </div>
-            <button type="button" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#pinBackdrop" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
           </div>
         </div>    
     </div>
