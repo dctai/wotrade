@@ -335,11 +335,11 @@ tbody tr:hover {
       <div class="d-flex align-items-center flex-fill">
       <img style="height: 30px;" src="assets/images/logo.svg">
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link fw-bold px-0 text-black" href="#">Bets</a>
-        <a class="nav-link fw-bold px-0 text-brandred" href="Member.html">Member</a>
-        <a class="nav-link fw-bold px-0 text-black" href="#">Pending</a>
+        <a class="nav-link fw-bold px-0 text-black" href="bets.html">Bets</a>
+        <a class="nav-link fw-bold px-0 text-black" href="Member.html">Member</a>
+        <a class="nav-link fw-bold px-0 text-brandred" href="Pending.html">Pending</a>
         <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
-        <a class="nav-link fw-bold px-0 text-black" href="#">Result</a>
+        <a class="nav-link fw-bold px-0 text-black" href="result.html">Result</a>
         <a class="nav-link fw-bold px-0 text-black" href="payment.html">Payment</a>
       </nav>
       </div>
@@ -366,130 +366,188 @@ tbody tr:hover {
   </header>
 
   <main class="px-3 d-flex flex-column" style="padding-top: 150px;padding-bottom: 40px;">
-    <div class="d-flex align-items-center gap-3 mbh20">
-      <h3 class="fw-bold flex-fill">Member</h3>
-      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">New Player</a>
-      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">New Agent</a>
-      <div>
-        <div class="d-flex px-2 bg-lg rounded-2 line-gray" style="width:450px;">
-        <input class="m-0 bg-lg" type="search" aria-label="Search"><button class="btn" type="submit"><img style="height: 24px;" src="assets/images/ic-search.svg"></button>
-        </div>
+    <div class="container-xl">
+      <h3 class="fw-bold flex-fill mbh20">Pending</h3>
+      <div class="row">
+      <!--Left-->
+    <div class="col-6">
+    <div class="d-flex align-items-center gap-2 mbh20">
+      <div class="input-group" style="width:70px;">
+        <select class="form-select bg-lg line-gray p-2" id="inputGroupSelect01">
+          <option selected>2D</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
+      <div class="input-group" style="width:150px;">
+        <select class="form-select bg-lg line-gray p-2" id="inputGroupSelect01">
+          <option selected>17/12/24 12:01</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <input class="form-control p-2 m-0 bg-lg line-gray" placeholder="code" type="text" style="width:70px;">
+      <div class="input-group" style="width:100px;">
+        <select class="form-select bg-lg line-gray p-2" id="inputGroupSelect01">
+          <option selected>Select</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 24px;" src="assets/images/ic-searchw.svg"></a>
+      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 60px;">Clear</a>
+      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 60px;">Back</a>
     </div>
-    <div class="d-flex gap-1 mbh20">
-      <a href="#" class="text-brandred">A000P3004</a>
-      <img style="height: 24px;" src="assets/images/Arrow-rbk.svg">
-      <a href="#" class="text-brandred">A000P3004</a>
-      <img style="height: 24px;" src="assets/images/Arrow-rbk.svg">
-      <a href="#" class="text-brandred">A000P3004</a>
-      <img style="height: 24px;" src="assets/images/Arrow-rbk.svg">
-      <a href="#" class="text-brandred">A000P3004</a>
-      <img style="height: 24px;" src="assets/images/Arrow-rbk.svg">
-      <a href="#" class="text-brandred">A000P3004</a>
-    </div>
-
+    <h6>06/10/24 India BSE Sensex</h6>
 
    <!--Table-->
    <div class="rounded-2 overflow-hidden mbh40" style="border: 1px solid #d7d7d7">
     <table class="table table-responsive table-borderless m-0">
      <thead>
-     <tr class="row bg-lightred text-white px-3 g-0">
-      <th class="col bg-transparent text-white">Code</th>
-      <th class="col bg-transparent text-white">User</th>
-      <th class="col bg-transparent text-white">Type</th>
-      <th class="col bg-transparent text-white" style="min-width: 240px;">Credit</th>
-      <th class="col bg-transparent text-white">Commision</th>
-      <th class="col bg-transparent text-white">Strike Tax</th>
-      <th class="col bg-transparent text-white">DownLine</th>
-      <th class="col bg-transparent text-white"></th>
+     <tr class="row bg-white text-black px-1 g-0 border-bottom">
+      <th class="col bg-transparent text-black" style="min-width: 104px;">Code</th>
+      <th class="col bg-transparent text-black" style="min-width: 104px;">User</th>
+      <th class="col bg-transparent text-black">Role</th>
+      <th class="col bg-transparent text-black">Amount</th>
+      <th class="col bg-transparent text-black">%</th>
+      <th class="col bg-transparent text-black">DownLine</th>
+      <th class="col bg-transparent text-black">View</th>
     </tr>
     </thead>
     <tbody>
-    <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+    <tr class="bg-w text-black row g-0 px-1 text-decoration-none align-middle">
       <td class="col bg-transparent">A000P3004</td>
       <td class="col bg-transparent">A000P3004</td>
       <td class="col bg-transparent">Agent</td>
-      <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-      <td class="col bg-transparent">10%</td>
-      <td class="col bg-transparent">10%</td>
+      <td class="col bg-transparent">10000</td>
+      <td class="col bg-transparent">100.00%</td>
+      <td class="col bg-transparent">DownLine</td>
       <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-      <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
     </tr>
-    <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+    <tr class="bg-lightgray text-black row g-0 px-1 text-decoration-none align-middle">
       <td class="col bg-transparent">A000P3004</td>
       <td class="col bg-transparent">A000P3004</td>
       <td class="col bg-transparent">Agent</td>
-      <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-      <td class="col bg-transparent">10%</td>
-      <td class="col bg-transparent">10%</td>
+      <td class="col bg-transparent">10000</td>
+      <td class="col bg-transparent">100.00%</td>
+      <td class="col bg-transparent"> </td>
       <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-      <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
    </tr>
-   <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+   <tr class="bg-w text-black row g-0 px-1 text-decoration-none align-middle">
     <td class="col bg-transparent">A000P3004</td>
     <td class="col bg-transparent">A000P3004</td>
     <td class="col bg-transparent">Agent</td>
-    <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-    <td class="col bg-transparent">10%</td>
-    <td class="col bg-transparent">10%</td>
+    <td class="col bg-transparent">10000</td>
+    <td class="col bg-transparent">100.00%</td>
+    <td class="col bg-transparent"> </td>
     <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-    <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
   </tr>
-  <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+  <tr class="bg-lightgray text-black row g-0 px-1 text-decoration-none align-middle">
     <td class="col bg-transparent">A000P3004</td>
     <td class="col bg-transparent">A000P3004</td>
     <td class="col bg-transparent">Agent</td>
-    <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-    <td class="col bg-transparent">10%</td>
-    <td class="col bg-transparent">10%</td>
+    <td class="col bg-transparent">10000</td>
+    <td class="col bg-transparent">100.00%</td>
+    <td class="col bg-transparent"> </td>
     <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-    <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
  </tr>
- <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+ <tr class="bg-w text-black row g-0 px-1 text-decoration-none align-middle">
   <td class="col bg-transparent">A000P3004</td>
   <td class="col bg-transparent">A000P3004</td>
   <td class="col bg-transparent">Agent</td>
-  <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-  <td class="col bg-transparent">10%</td>
-  <td class="col bg-transparent">10%</td>
+  <td class="col bg-transparent">10000</td>
+  <td class="col bg-transparent">100.00%</td>
+  <td class="col bg-transparent"> </td>
   <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-  <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
 </tr>
-<tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+<tr class="bg-lightgray text-black row g-0 px-1 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
   <td class="col bg-transparent">A000P3004</td>
   <td class="col bg-transparent">A000P3004</td>
   <td class="col bg-transparent">Agent</td>
-  <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-  <td class="col bg-transparent">10%</td>
-  <td class="col bg-transparent">10%</td>
+  <td class="col bg-transparent">10000</td>
+  <td class="col bg-transparent">100.00%</td>
+  <td class="col bg-transparent"> </td>
   <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-  <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
 </tr>
-<tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
-  <td class="col bg-transparent">A000P3004</td>
-  <td class="col bg-transparent">A000P3004</td>
-  <td class="col bg-transparent">Agent</td>
-  <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-  <td class="col bg-transparent">10%</td>
-  <td class="col bg-transparent">10%</td>
-  <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-  <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
-</tr>
-<tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
-  <td class="col bg-transparent">A000P3004</td>
-  <td class="col bg-transparent">A000P3004</td>
-  <td class="col bg-transparent">Agent</td>
-  <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
-  <td class="col bg-transparent">10%</td>
-  <td class="col bg-transparent">10%</td>
-  <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-  <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
+<tr class="bg-w text-black row g-0 px-1 text-decoration-none align-middle">
+  <td class="col bg-transparent fw-bold" style="min-width: 104px;">Total</td>
+  <td class="col bg-transparent" style="min-width: 104px;"></td>
+  <td class="col bg-transparent"></td>
+  <td class="col bg-transparent fw-bold">10000</td>
+  <td class="col bg-transparent fw-bold">100.00%</td>
+  <td class="col bg-transparent"></td>
+  <td class="col bg-transparent"><a class="text-brandred"></a></td>
 </tr>
     </tbody>
     </table>
    </div>
-
-
+  </div>
+  <!--Right-->
+  <div class="col-6">
+    <div class="d-flex align-items-center gap-2 mbh20">
+      <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 24px;" src="assets/images/ic-chart.svg"></a>
+      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 90px; line-height: 26px;">Summary</a>
+      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 70px; line-height: 26px;">Detail</a>
+      <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 90px; line-height: 26px;">Stock File</a>
+      <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 24px;" src="assets/images/ic-printer.svg"></a>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination m-0 border rounded-2">
+          <li class="page-item">
+            <a class="page-link border-0 text-black" href="#" aria-label="Previous" style="line-height: 29px;">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link border-0 text-black" href="#" style="line-height: 29px;">1</a></li>
+          <li class="page-item"><a class="page-link border-0 text-black" href="#" style="line-height: 29px;">2</a></li>
+          <li class="page-item"><a class="page-link border-0 text-black" href="#" style="line-height: 29px;">3</a></li>
+          <li class="page-item">
+            <a class="page-link border-0  text-black" text-black href="#" aria-label="Next" style="line-height: 29px;">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <h6>A000</h6>
+    <div class="rounded-2 overflow-hidden mbh40" style="border: 1px solid #d7d7d7">
+    <table class="table table-responsive table-borderless m-0">
+      <thead>
+      <tr class="row bg-white text-black px-3 g-0 border-bottom">
+       <th class="col bg-transparent text-black">Number</th>
+       <th class="col bg-transparent text-black">Count</th>
+       <th class="col bg-transparent text-black">Amount</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle">
+       <td class="col bg-transparent">111</td>
+       <td class="col bg-transparent">3</td>
+       <td class="col bg-transparent">30000</td>
+     </tr>
+     <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle">
+      <td class="col bg-transparent">111</td>
+      <td class="col bg-transparent">3</td>
+      <td class="col bg-transparent">30000</td>
+    </tr>
+    <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+      <td class="col bg-transparent">111</td>
+      <td class="col bg-transparent">3</td>
+      <td class="col bg-transparent">30000</td>
+    </tr>
+    <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+      <td class="col bg-transparent fw-bold">Total:2</td>
+      <td class="col bg-transparent fw-bold">3</td>
+      <td class="col bg-transparent fw-bold">30000</td>
+    </tr>
+     </tbody>
+     </table>
+    </div>
+  </div>
+</div>
+</div>
   </main>
 
   <footer class="d-flex align-items-center justify-content-around mt-auto text-white py-3">

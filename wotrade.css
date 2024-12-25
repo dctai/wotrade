@@ -15,6 +15,14 @@ body {
   background-image:url(assets/images/bg-01.jpg);
 }
 
+.jackpot{
+  background-image:url(assets/images/jackpot.png);
+  width:100%;
+  height:10rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .cover-container {
   max-width: 42em;
 }
