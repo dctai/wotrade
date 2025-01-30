@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>WoTrade</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      input {
+	font-family: 'Roboto', sans-serif;
+	display:block;
+	border: none;
+	border-radius: 0.25rem;
+	border: 1px solid transparent;
+	line-height: 1.5rem;
+	padding: 0;
+	font-size: 1rem;
+	color: #607D8B;
+	width: 100%;
+	margin-top: 0.5rem;
+}
+input:focus {outline: none;}
+#ui-datepicker-div {
+	display: none;
+	background-color: #fff;
+	box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+	margin-top: 0.25rem;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.ui-datepicker-calendar thead th {
+	padding: 0.25rem 0;
+	text-align: center;
+	font-size: 0.75rem;
+	font-weight: 400;
+	color: #78909C;
+}
+.ui-datepicker-calendar tbody td {
+	width: 2.5rem;
+	text-align: center;
+	padding: 0;
+}
+.ui-datepicker-calendar tbody td a {
+	display: block;
+	border-radius: 0.25rem;
+	line-height: 2rem;
+	transition: 0.3s all;
+	color: #546E7A;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+.ui-datepicker-calendar tbody td a:hover {	
+	background-color: #F0F0F0;
+}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+	background-color: #FF4726;
+	color: white;
+}
+.ui-datepicker-header a.ui-corner-all {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	width: 2rem;
+	height: 2rem;
+	margin: 0.5rem;
+	border-radius: 0.25rem;
+	transition: 0.3s all;
+}
+.ui-datepicker-header a.ui-corner-all:hover {
+	background-color: #ECEFF1;
+}
+.ui-datepicker-header a.ui-datepicker-prev {	
+	left: 0;	
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+	background-repeat: no-repeat;
+	background-size: 0.5rem;
+	background-position: 50%;
+	transform: rotate(180deg);
+}
+.ui-datepicker-header a.ui-datepicker-next {
+	right: 0;
+	background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==');
+	background-repeat: no-repeat;
+	background-size: 10px;
+	background-position: 50%;
+}
+.ui-datepicker-header a>span {
+	display: none;
+}
+.ui-datepicker-title {
+	text-align: center;
+	line-height: 2rem;
+	margin-bottom: 0.25rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding-bottom: 0.25rem;
+}
+.ui-datepicker-week-col {
+	color: #78909C;
+	font-weight: 400;
+	font-size: 0.75rem;
+}
+#inputcontainer {
+       display: flex;
+      }
+      #inputcontainer > svg {
+       margin-left: 5px;
+      }
+      .password-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 0px;
+            border-radius: 4px;
+        }
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .input-group {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .input-display {
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        .toggle-icon:hover {
+            color: #333;
+        }
+        button {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .group-title {
+            color: #666;
+            margin-top: 0;
+        }
+        .dropbtn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:-100px;
+}
+
+.dropdown-content a {
+  color: #FF4726;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="wotrade.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-bg-light">
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content rounded-24 w-75 mx-auto">
+    <div class="modal-header d-flex flex-column border-0">
+      <img class="mbh12" src="assets/images/alert_l.svg">
+      <h5 class="modal-title text-center w-100" id="staticBackdropLabel">两次输入的密码不一致!</h5>
+      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+    </div>
+    <div class="modal-footer border-0">
+      <button type="button" class="flex-fill btn bg-brandred rounded-2 text-white" data-bs-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="pinBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content rounded-24 w-75 mx-auto">
+    <div class="modal-header d-flex flex-column border-0">
+      <img class="mbh12" src="assets/images/check_l.svg">
+      <h5 class="modal-title text-center w-100" id="staticBackdropLabel">PIN码更改成功讯息</h5>
+      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+    </div>
+    <div class="modal-footer border-0">
+      <button type="button" class="flex-fill btn bg-brandred rounded-2 text-white" data-bs-dismiss="modal">确定</button>
+    </div>
+  </div>
+</div>
+</div>
+
+    
+<div class="d-flex w-100 h-100 mx-auto flex-column">
+  <header class="mb-auto bg-white header-shadow text-end py-4 px-4 fixed-top">
+    <div class="d-flex">
+      <div class="d-flex align-items-center flex-fill">
+      <img style="height: 30px;" src="assets/images/logo.svg">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link fw-bold px-0 text-black" href="bets.html">Bets</a>
+        <a class="nav-link fw-bold px-0 text-black" href="Member.html">Member</a>
+        <a class="nav-link fw-bold px-0 text-black" href="Pending.html">Pending</a>
+        <a class="nav-link fw-bold px-0 text-black" href="reports.html">Reports</a>
+        <a class="nav-link fw-bold px-0 text-black" href="result.html">Result</a>
+        <a class="nav-link fw-bold px-0 text-black" href="payment.html">Payment</a>
+      </nav>
+      </div>
+      <div class="d-flex gap-2" style="height: 48px;">
+        <div class="d-flex">
+          <a class="d-flex text-decoration-none text-black" href="profile.html"><img class="bg-brandred p-2 rounded-start-2" src="assets/images/ic-user.svg"><div class="p-2 line-brandred" style="line-height: 30px;">A000P2002</div></a>
+          <a class="d-flex text-decoration-none text-black" href="#"><img class="bg-brandred p-2" src="assets/images/ic-asset.svg"><div class="p-2 rounded-end-2 line-brandred" style="line-height: 30px;">999,999,999,970,185,000</div></a>
+        </div>
+        <a class="bg-brandred p-2 rounded-2" href="announce.html"><img style="height: 30px;" src="assets/images/ic-noti.svg"></a>
+        <div class="dropdown">
+          <button class="bg-brandred p-2 rounded-2 border-0"><img style="height: 30px;" src="assets/images/ic-language.svg"><img style="height: 15px;" src="assets/images/ic-arrow1.svg"></button>
+          <div class="dropdown-content rounded-2 text-start">
+          <a href="#">မြန်ြာဘာသာ</a>
+          <a href="#">Việt Nam</a>
+          <a href="#">English</a>
+          <a href="#">中文</a>
+          </div>
+        </div>
+        <a class="bg-brandred p-2 rounded-2" href="#"><img style="height: 30px;" src="assets/images/ic-quiz.svg"></a>
+        <a class="bg-brandred p-2 rounded-2" href="index.html"><img style="height: 30px;" src="assets/images/ic-logout.svg"></a>
+      </div>
+    </div>
+      <span class="fw-bold">25/4/2024 15:38:05</span>
+  </header>
+
+  <main class="px-3 d-flex flex-column align-items-center" style="padding-top: 150px;">
+   
+    <div class="w-100" style="max-width: 1130px; padding-bottom: 40px;">
+    <div class="d-flex bg-white rounded-4 py-4 w-100 align-items-center mbh40">
+      <h3 class="w-25 fw-bold" style="line-height: 44px; padding-left: 40px; border-left: 4px solid #C74040">Change
+        <br>Password</h3>
+        <div class="border-start px-4 py-2 w-75">
+          <div class="gap-2">
+            <label>Original password</label>
+            <div class="password-container">
+              <input type="password" id="password1" class="bg-lg rounded-2">
+              <i class="toggle-password fas fa-eye" onclick="togglePassword('password1', this)"></i>
+            </div>
+            <label>New password</label>
+            <div class="password-container">
+              <input type="password" id="password2" class="bg-lg rounded-2">
+              <i class="toggle-password fas fa-eye" onclick="togglePassword('password2', this)"></i>
+            </div>
+            <label>Confirm new password</label>
+            <div class="password-container">
+              <input type="password" id="password3" class="bg-lg rounded-2">
+              <i class="toggle-password fas fa-eye" onclick="togglePassword('password3', this)"></i>
+            </div>
+              <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
+          </div>
+        </div>    
+    </div>
+
+    <div class="d-flex bg-white rounded-4 py-4 w-100 align-items-center mbh40">
+      <h3 class="w-25 fw-bold" style="line-height: 44px; padding-left: 40px; border-left: 4px solid #C74040">Change
+        <br>Pin Code</h3>
+        <div class="border-start px-4 py-2 w-75">
+          <div class="gap-2" id="group1">
+            <div class="input-container">
+              <div class="d-flex mbh20">
+                <input type="password" readonly class="input-display form-control no-border rounded-2" style="background-color: #f0f0f0;">
+                <i class="toggle-icon fas fa-eye-slash" style="font-size:16px;" onclick="toggleInputType('group1')"></i>
+              </div>
+            </div>
+            <div class="row g-0 mbh20" style="gap:15px;">
+              <div class="row g-0" style="gap:15px;">
+                <button onclick="addNumber('group1', '1')" class="col p-2 bg-lg rounded-2 text-center border-0">1</button>
+                <button onclick="addNumber('group1', '2')" class="col p-2 bg-lg rounded-2 text-center border-0">2</button>
+                <button onclick="addNumber('group1', '3')" class="col p-2 bg-lg rounded-2 text-center border-0">3</button>
+                <button onclick="addNumber('group1', '4')" class="col p-2 bg-lg rounded-2 text-center border-0">4</button>
+                <button onclick="addNumber('group1', '5')" class="col p-2 bg-lg rounded-2 text-center border-0">5</button>
+                <button onclick="addNumber('group1', '6')" class="col p-2 bg-lg rounded-2 text-center border-0">6</button>
+                <button onclick="addNumber('group1', '7')" class="col p-2 bg-lg rounded-2 text-center border-0">7</button>
+                <button onclick="addNumber('group1', '8')" class="col p-2 bg-lg rounded-2 text-center border-0">8</button>
+                <button onclick="addNumber('group1', '9')" class="col p-2 bg-lg rounded-2 text-center border-0">9</button>
+                <button onclick="addNumber('group1', '0')" class="col p-2 bg-lg rounded-2 text-center border-0">0</button>
+              </div>
+            </div>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#pinBackdrop" class="p-2 bg-brandred rounded-2 text-white text-center border-0">Save</button>
+          </div>
+        </div>    
+    </div>
+  
+
+
+  </main>
+
+  <footer class="d-flex align-items-center justify-content-around mt-auto text-white py-3">
+    <div class="d-flex flex-column">
+      <span class="font-14">Customer Service Hotline</span>
+      <h3 class="my-0 fw-bold">400-8080-888</h3>
+      <span class="text-white-50 font-14">Online time: 08:30-19:30</span>
+    </div>
+    <div class="d-flex">
+    <div class="d-flex">
+    <img style="height: 120px;" src="assets/images/footerline.svg">
+    <div class="align-items-center d-flex flex-column px-5 gap-2">
+      <img style="height: 96px;" src="assets/images/664df99fb2c839349561a574_6b8638_95x96.png">
+      <span class="font-14">APP Download</span>
+    </div>
+    </div>  
+    <div class="d-flex">
+      <img style="height: 120px;" src="assets/images/footerline.svg">
+      <div class="align-items-center d-flex flex-column px-5 gap-2">
+        <img style="height: 96px;" src="assets/images/664df99fb2c839349561a574_6b8638_95x96.png">
+        <span class="font-14">WeChat</span>
+      </div>
+      </div>  
+  </div>
+    <div class="d-flex gap-4">
+      <div class="d-flex flex-column gap-1">
+        <h5>About us</h5>
+        <a class="font-14 text-white">Company Introduction</a>
+        <a class="font-14 text-white">Beginner's Guide</a>
+        <a class="font-14 text-white">Help Center</a>
+      </div>
+      <div class="d-flex flex-column gap-1">
+        <h5>Security</h5>
+        <a class="font-14 text-white">Registration Agreement</a>
+        <a class="font-14 text-white">Safety guarantee</a>
+      </div>
+      <div class="d-flex flex-column gap-1">
+        <h5>Service</h5>
+        <a class="font-14 text-white">Contact us</a>
+        <a class="font-14 text-white">Trading Guidelines</a>
+      </div>
+    </div>
+  </footer>
+</div>
+<!--multiple Show/Hide Password-->
+<script>
+  function togglePassword(inputId, icon) {
+      const input = document.getElementById(inputId);
+      if (input.type === "password") {
+          input.type = "text";
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+      } else {
+          input.type = "password";
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+      }
+  }
+</script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function addNumber(groupId, number) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value += number;
+  }
+
+  function clearDisplay(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value = '';
+  }
+
+  function toggleInputType(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      const icon = document.querySelector(`#${groupId} .toggle-icon`);
+      
+      if (input.type === 'password') {
+          input.type = 'text';
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+      } else {
+          input.type = 'password';
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+      }
+  }
+</script>
+
+
+    </body>
+</html>

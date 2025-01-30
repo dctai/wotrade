@@ -192,18 +192,13 @@
       <div class="modal-dialog">
         <div class="modal-content p-4">
           <div class="modal-header border-0 d-flex text-center">
-            <h1 class="modal-title fs-5 w-100" id="exampleModalLabel"><span style="margin-right:8px;">登入</span><img style="height: 30px; margin-top:-6px;" src="assets/images/logo.svg"></h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body border-0">
-           <label class="fw-bold">登入名稱</label>
-           <input type="text" class="input-display form-control bg-lg border-0 rounded-2 mbh20" placeholder="輸入您的登入名稱">
-           <label class="fw-bold">登入密碼</label>
-           <input type="password" class="input-display form-control bg-lg border-0 rounded-2 mbh20" placeholder="輸入您的登入密碼">
+          <div class="modal-body border-0 text-center">
+          Are you sure?
           </div>
-          <div class="modal-footer border-0">
-            <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-            <button class="w-100 btn p-2 bg-brandred rounded-2 text-white text-center" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">登入</button>
+          <div class="modal-footer border-0 d-flex">
+            <button type="button" class="flex-fill p-2 btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button class="flex-fill btn p-2 bg-brandred rounded-2 text-white text-center" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">OK</button>
           </div>
         </div>
       </div>
@@ -412,7 +407,7 @@
             </tbody>
           </table>
           <div class="d-flex justify-content-end g-0 gap-3 mbh20">
-            <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Submit</a>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" class="bg-brandred p-2 rounded-2 border-0 text-white" style="width:200px;">Submit</button>
           </div>
         </div>
       </div>

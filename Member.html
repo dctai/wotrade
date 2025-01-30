@@ -177,7 +177,7 @@ tbody tr:hover {
   </head>
   <body class="d-flex h-100 text-bg-light">
 
-   <!--Off Canvas-->
+   <!--Off Canvas Shareholder-->
     <div class="offcanvas offcanvas-end w-50 px-3" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
         <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Upline</h3>
@@ -292,6 +292,436 @@ tbody tr:hover {
         <a href="#" class="col p-2 bg-g rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Reset</a>
       </div>
 
+      <hr class="solid">
+      <h3 class="fw-bold mbh20">TRANSFER%</h3>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Shareholder</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>100%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>Transfer</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>10%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="rounded-2 overflow-hidden mbh40" style="border: 1px solid #d7d7d7">
+        <table class="table table-responsive table-borderless m-0">
+          <thead>
+          <tr class="row bg-white text-black px-3 g-0 border-bottom">
+           <th class="col bg-transparent text-black">Number</th>
+           <th class="col bg-transparent text-black">Count</th>
+           <th class="col bg-transparent text-black">Amount</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle">
+           <td class="col bg-transparent">111</td>
+           <td class="col bg-transparent">3</td>
+           <td class="col bg-transparent">30000</td>
+         </tr>
+         <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle">
+          <td class="col bg-transparent">111</td>
+          <td class="col bg-transparent">3</td>
+          <td class="col bg-transparent">30000</td>
+        </tr>
+        <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+          <td class="col bg-transparent">111</td>
+          <td class="col bg-transparent">3</td>
+          <td class="col bg-transparent">30000</td>
+        </tr>
+        <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle" style="border-bottom: 1px solid #E9E9E9;">
+          <td class="col bg-transparent fw-bold">Total:2</td>
+          <td class="col bg-transparent fw-bold">3</td>
+          <td class="col bg-transparent fw-bold">30000</td>
+        </tr>
+         </tbody>
+         </table>
+        </div>
+        <div class="d-flex justify-content-end g-0 gap-3 mbh20">
+          <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Save</a>
+        </div>
+
+      </div>
+    </div>
+
+       <!--Off Canvas Player-->
+       <div class="offcanvas offcanvas-end w-50 px-3" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Upline</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+  
+        <div class="bg-lg d-flex p-3 gap-5 rounded-3 mbh40">
+          <div class="d-flex">
+            <div class="text-gray me-2">Code</div>
+            <h6 class="fw-bold m-0" style="line-height: 24px;">A000A1001</h6>
+          </div>
+          <div  class="d-flex">
+            <div class="text-gray me-2">Name</div>
+            <h6 class="fw-bold m-0" style="line-height: 24px;">A000A1001</h6>
+          </div>
+        </div>
+        <h3 class="fw-bold mbh20">Profile</h3>
+        <div class="row gap-1 mbh20">
+          <div class="col">
+            <label>Code</label>
+            <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+          </div>
+          <div class="col">
+            <label>User</label>
+            <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+          </div>
+        </div>
+        <div class="row gap-1 mbh20">
+          <div class="col">
+          <div class="row gap-1">
+          <div class="col">
+            <label>Password</label>
+            <input type="password" class="input-display form-control bg-lg border-0 rounded-2">
+          </div>
+          <div class="col">
+            <label>Pin</label>
+            <input type="password" class="input-display form-control bg-lg border-0 rounded-2">
+          </div>
+          </div>
+          </div>
+          <div class="col">
+            <label>Status</label>
+            <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+              <option selected>Active</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1 mbh20">
+          <div class="col">
+            <label>Credit Limit</label>
+            <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+          </div>
+          <div class="col">
+            <label>Available Credit</label>
+            <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+          </div>
+        </div>
+  
+        <h3 class="fw-bold mbh20">System</h3>
+        <div class="row gap-1 mbh20">
+          <div class="col">
+            <label>Commission</label>
+            <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+              <option selected>10%</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col">
+            <label>Strike Tax</label>
+            <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+              <option selected>5%</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1 mbh20">
+          <div class="col">
+            <label>Memo</label>
+            <input type="text" class="input-display form-control bg-lg border-0 rounded-2" style="height: 80px;">
+          </div>
+        </div>
+        <div class="d-flex justify-content-end g-0 gap-3 mbh20">
+          <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Save</a>
+          <a href="#" class="col p-2 bg-g rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Reset</a>
+        </div>
+  
+        </div>
+      </div>
+
+    <!--Off Canvas Boss-->
+    <div class="offcanvas offcanvas-end w-50 px-3" tabindex="-1" id="offcanvasExample4" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Upline</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+      <div class="bg-lg d-flex p-3 gap-5 rounded-3 mbh40">
+        <div class="d-flex">
+          <div class="text-gray me-2">Code</div>
+          <h6 class="fw-bold m-0" style="line-height: 24px;">A000A1001</h6>
+        </div>
+        <div  class="d-flex">
+          <div class="text-gray me-2">Name</div>
+          <h6 class="fw-bold m-0" style="line-height: 24px;">A000A1001</h6>
+        </div>
+      </div>
+      <h3 class="fw-bold mbh20">Profile</h3>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Code</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+          <label>User</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+        <div class="row gap-1">
+        <div class="col">
+          <label>Password</label>
+          <input type="password" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+          <label>Pin</label>
+          <input type="password" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        </div>
+        </div>
+        <div class="col">
+          <label>Status</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>Active</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Credit Limit</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+          <label>Available Credit</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+      </div>
+
+      <h3 class="fw-bold mbh20">System</h3>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Commission</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>10%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>Strike Tax</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>5%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Intake Priority</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+          <label>Place Out</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Memo</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2" style="height: 80px;">
+        </div>
+      </div>
+      <div class="d-flex justify-content-end g-0 gap-3 mbh20">
+        <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Save</a>
+        <a href="#" class="col p-2 bg-g rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Reset</a>
+      </div>
+
+      </div>
+    </div>
+
+    <!--Off Canvas Agent-->
+    <div class="offcanvas offcanvas-end w-50 px-3" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Upline</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+      <div class="bg-lg d-flex p-3 gap-5 rounded-3 mbh40">
+        <div class="d-flex">
+          <div class="text-gray me-2">Code</div>
+          <h6 class="fw-bold m-0" style="line-height: 24px;">A000A1001</h6>
+        </div>
+        <div  class="d-flex">
+          <div class="text-gray me-2">Name</div>
+          <h6 class="fw-bold m-0" style="line-height: 24px;">A000A1001</h6>
+        </div>
+      </div>
+      <h3 class="fw-bold mbh20">Profile</h3>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Code</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+          <label>User</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+        <div class="row gap-1">
+        <div class="col">
+          <label>Password</label>
+          <input type="password" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+          <label>Pin</label>
+          <input type="password" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        </div>
+        </div>
+        <div class="col">
+          <label>Status</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>Active</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Credit Limit</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+          <label>Available Credit</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+        <div class="row gap-1">
+        <div class="col">
+          <label>啟用下注</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>是</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>啟用創建代理</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>是</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        </div>
+        </div>
+        <div class="col">
+          <div class="row gap-1">
+            <div class="col">
+              <label>啟用創建攝入</label>
+              <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+                <option selected>是</option>
+                <option value="1">否</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col">
+            </div>
+            </div>
+        </div>
+      </div>
+
+      <h3 class="fw-bold mbh20">System</h3>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Commission</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>10%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>Strike Tax</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>5%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Expenses %</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>100%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>Intake Amount</label>
+          <select class="form-select bg-lg border-0 mt-1" id="inputGroupSelect01">
+            <option selected>10%</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Intake Amount</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2">
+        </div>
+        <div class="col">
+        </div>
+      </div>
+      <div class="row gap-1 mbh20">
+        <div class="col">
+          <label>Memo</label>
+          <input type="text" class="input-display form-control bg-lg border-0 rounded-2" style="height: 80px;">
+        </div>
+      </div>
+      <div class="d-flex justify-content-end g-0 gap-3 mbh20">
+        <a href="#" class="col p-2 bg-brandred rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Save</a>
+        <a href="#" class="col p-2 bg-g rounded-2 text-white text-center text-decoration-none" style="max-width: 200px;">Reset</a>
+      </div>
+
       </div>
     </div>
     
@@ -375,7 +805,7 @@ tbody tr:hover {
     <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle">
       <td class="col bg-transparent">A000P3004</td>
       <td class="col bg-transparent">A000P3004</td>
-      <td class="col bg-transparent">Agent</td>
+      <td class="col bg-transparent">Shareholder</td>
       <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
       <td class="col bg-transparent">10%</td>
       <td class="col bg-transparent">10%</td>
@@ -390,27 +820,27 @@ tbody tr:hover {
       <td class="col bg-transparent">10%</td>
       <td class="col bg-transparent">10%</td>
       <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-      <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
+      <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample2"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
    </tr>
    <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle">
     <td class="col bg-transparent">A000P3004</td>
     <td class="col bg-transparent">A000P3004</td>
-    <td class="col bg-transparent">Agent</td>
+    <td class="col bg-transparent">Player</td>
     <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
     <td class="col bg-transparent">10%</td>
     <td class="col bg-transparent">10%</td>
     <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-    <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
+    <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample3" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
   </tr>
   <tr class="bg-lightgray text-black row g-0 px-3 text-decoration-none align-middle">
     <td class="col bg-transparent">A000P3004</td>
     <td class="col bg-transparent">A000P3004</td>
-    <td class="col bg-transparent">Agent</td>
+    <td class="col bg-transparent">Boss</td>
     <td class="col bg-transparent" style="min-width: 240px;">100000000000000000000</td>
     <td class="col bg-transparent">10%</td>
     <td class="col bg-transparent">10%</td>
     <td class="col bg-transparent"><a class="text-brandred">View</a></td>
-    <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
+    <td class="col bg-transparent text-end"><a data-bs-toggle="offcanvas" href="#offcanvasExample4" role="button" aria-controls="offcanvasExample"><img style="height: 24px;" src="assets/images/Edit.svg"></a></td>
  </tr>
  <tr class="bg-w text-black row g-0 px-3 text-decoration-none align-middle">
   <td class="col bg-transparent">A000P3004</td>
